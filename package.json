@@ -21,7 +21,9 @@
         "@smui/button": "^6.1.0",
         "@smui/common": "^6.1.0",
         "@smui/dialog": "^6.1.0",
+        "@smui/list": "^6.1.0",
         "@smui/paper": "^6.1.0",
-        "firebase": "^9.10.0"
+        "firebase": "^9.10.0",
+        "svelte-router-spa": "^6.0.3"
     }
 }
