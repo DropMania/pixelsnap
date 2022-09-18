@@ -2,19 +2,17 @@
     import List, { Item, Separator, Text, Graphic } from '@smui/list'
     import { user } from '../stores.js'
     import Login from './Login.svelte'
+    import {navigateTo} from 'svelte-router-spa'
     let isLogin = false
     function openLogin() {
         isLogin = true
-    }
-    function openProfile() {
-        //profile
     }
 </script>
 
 <div class="left-list">
     <List>
-        <Item>
-            <Graphic class="material-icons">home</Graphic>
+        <Item on:click={()=>navigateTo('/')}>
+            <Graphic class="material-icons" color='secondary'>home</Graphic>
             <Text>Home</Text>
         </Item>
         <Separator />
@@ -24,7 +22,7 @@
                 <Text>Login</Text>
             </Item>
         {:else}
-            <Item on:click={openProfile}>
+            <Item on:click={()=>navigateTo('profile')}>
                 <Graphic class="material-icons">account_circle</Graphic>
                 <Text>Profile</Text>
             </Item>
